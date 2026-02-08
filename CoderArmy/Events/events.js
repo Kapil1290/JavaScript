@@ -5,7 +5,7 @@
 
 const a = document.getElementById("head")
 // a.onclick = function handleClick(){
-//     a.textContent = "Hello Programmer!!!..."
+//     a.textContent = "Hello Programmer!!!...""
 // }
 
 // // below will override the method and below will accept
