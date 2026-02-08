@@ -60,13 +60,21 @@ const arr = ["Halwa","Panir","Milk","Test"]
 const unorderElement = document.getElementById("listing")
 const fragment = document.createDocumentFragment()
 
+const arr1 = [];
 for(let val of arr){
 const ulList = document.createElement("li")
 ulList.textContent = val;
-ulList.style.color = "green"
-ulList.style.fontSize = "30px"
-fragment.append(ulList)
+arr1.push(ulList)
 }
-unorderElement.append(fragment)
+// unorderElement.append(fragment)
 // but how we can do without fragment, with array
-console.dir(document)
+for(let val of arr1){
+    unorderElement.append(val)
+}
+console.log(unorderElement)
+
+
+const s1 = document.getElementById("first")
+s1.remove();
+
+newEle.remove()
