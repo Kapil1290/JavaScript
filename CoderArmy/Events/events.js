@@ -78,10 +78,12 @@ const a = document.getElementById("head")
 // }
 
 
+// BUBBLING IN JS
+
 // const grandparent = document.getElementById("grandparent")
 // grandparent.addEventListener('click',(e)=>{
 //     console.log(e.target)
-//     e.stopPropagation();
+//     e.stopPropagation();   // used to stop bubbling
 //     // console.log("grandparent is click")
 // })
 
