@@ -13,19 +13,117 @@ const a = document.getElementById("head")
 //     a.textContent = "I am coming..."
 // }
 
-a.addEventListener('dblclick',()=>{
-    a.style.background = "pink"
+
+// a.addEventListener('mouseenter',()=>{
+//     a.style.backgroundColor = "pink"
+//     a.style.fontSize = "50px"
+// })
+
+// a.addEventListener('mouseleave',()=>{
+//     a.style.backgroundColor = "purple"
+//     a.style.fontSize = "20px"
+// })
+
+
+
+// a.addEventListener('mouseenter',()=>{
+//     a.style.backgroundColor = "yellow"
+// })
+
+// a.addEventListener('dblclick',()=>{
+//     a.style.color = "green"
+// })
+
+// a.addEventListener('click',()=>{
+//     a.textContent = "Hello Guys>>>>>"
+//     a.style.color = "green"
+// })
+
+// const b1 = document.getElementById("child1")
+// const b2 = document.getElementById("child2")
+// const b3 = document.getElementById("child3")
+// const b4 = document.getElementById("child4")
+// const b5 = document.getElementById("child5")
+
+
+// b1.addEventListener('mouseenter',()=>{
+//     b1.textContent = "I am clicked"
+// })
+
+// b2.addEventListener('mouseenter',()=>{
+//     b2.textContent = "I am clicked"
+// })
+
+// b3.addEventListener('mouseenter',()=>{
+//     b3.textContent = "I am clicked"
+// })
+
+// b4.addEventListener('mouseenter',()=>{
+//     b4.textContent = "I am clicked"
+// })
+
+// b5.addEventListener('mouseenter',()=>{
+//     b5.textContent = "I am clicked"
+// })
+
+
+
+// const parent = document.getElementById("parent")
+// console.log(parent.children)
+
+// for(let child of parent.children){
+//     child.addEventListener('click',()=>{
+//         child.textContent = "I am clicked"
+//     })
+// }
+
+
+// const grandparent = document.getElementById("grandparent")
+// grandparent.addEventListener('click',(e)=>{
+//     console.log(e.target)
+//     e.stopPropagation();
+//     // console.log("grandparent is click")
+// })
+
+
+
+
+
+const parent= document.getElementById("parent")
+
+// to remove the event listener
+
+function handleEvent(e){
+    e.target.textContent = "I am clicked";
+    parent.removeEventListener('click',handleEvent)
+}
+
+
+// show which box have clicked 
+
+parent.addEventListener('click',(e)=>{     // cover all child to show clickness
+    e.target.textContent = "I am clicked"    
+    console.log(e.target)
 })
 
-a.addEventListener('mouseenter',()=>{
-    a.textContent = "Hello Guys>>>>>"
-})
+parent.addEventListener('click',handleEvent)
 
-a.addEventListener('mouseleave',()=>{
-    a.textContent = "Hello Guys>>>>>"
-})
 
-a.addEventListener('click',()=>{
-    a.textContent = "Hello Guys>>>>>"
-    a.style.color = "green"
-})
+
+
+// const parent = document.getElementById("parent")
+// parent.addEventListener('click',(e)=>{
+//     // console.log(e)
+//     // e.stopPropagation();
+//     // console.log("parent is clicked")
+// })
+
+// const child = document.getElementById("child")
+// child.addEventListener('click',(e)=>{
+//     // console.log(e)
+//     // e.stopPropagation();
+//     // console.log("child is clicked")
+// })
+
+// if capture face is on: Top to Down
+// otherwise : Down to Top (Bubbling Face)
