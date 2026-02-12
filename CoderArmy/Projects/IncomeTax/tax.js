@@ -4,7 +4,7 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault()
     let a = Number(income.value);
     let tax;
-    if(a<=1200000){
+    if(a<1200000){
         tax ="No Tax";
     }else if(a>=1200000  &&  a<1600000){
         a=a-1200000;
