@@ -1,15 +1,14 @@
-const form = document.querySelector("form")
+const form = document.querySelector('form')
 
-form.addEventListener('submit',()=>{
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();   // form's default behaviour which is submit the form to prevent this process
     const boy = document.getElementById("Boy")
     const girl = document.getElementById("Girl")
 
-    const a = boy.Value.length;
-    const b = boy.Value.length;
-    console.log(a)
-    console.log(a)
-    const val = Math.pow(a+b,3);
-    console.log(val)
-    const res = document.getElementById("res");
-    // res.textContent = "hllee";
+    const a = boy.value.length;
+    const b = girl.value.length;
+    const val = Math.pow(a+b,3)%101;
+    document.querySelector('h2').textContent = `Result: ${val}%`
+    document.querySelector('h2').style.color = "aqua"
+    form.reset(); // reseting the form inputs 
 })
