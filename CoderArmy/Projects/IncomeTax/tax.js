@@ -6,7 +6,7 @@ form.addEventListener('submit',(e)=>{
     let tax;
     if(a<=1200000){
         tax ="No Tax";
-    }else if(a>1200000  &&  a<1600000){
+    }else if(a>=1200000  &&  a<1600000){
         a=a-1200000;
         tax = (a/100)*15;
     } else if(a>=1600000 && a<2000000){
