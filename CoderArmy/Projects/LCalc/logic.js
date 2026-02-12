@@ -6,10 +6,10 @@ form.addEventListener('submit',()=>{
 
     const a = boy.Value.length;
     const b = boy.Value.length;
-
+    console.log(a)
     console.log(a)
     const val = Math.pow(a+b,3);
+    console.log(val)
     const res = document.getElementById("res");
-    res.textContent = res.textContent + val;
-
+    // res.textContent = "hllee";
 })
