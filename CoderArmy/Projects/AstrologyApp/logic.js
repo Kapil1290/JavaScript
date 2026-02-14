@@ -78,7 +78,7 @@ form.addEventListener('submit',(e)=>{
     const month = parseInt(document.getElementById("month").value);
     const year = parseInt(document.getElementById("year").value);
     
-    console.dir(name);
+    
     const res = `Hello ${name} ${surname} Your zodiac sign is ${zodiacSigns[month-1]}.
     CareerPath is ${careerPath[month-1]}. LoveVibe is ${loveVibes[year%20]}`
 
