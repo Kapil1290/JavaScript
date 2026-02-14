@@ -68,16 +68,17 @@ const cosmicWisdom = [
   "The fault is not in our stars, but in how we choose to follow them."
 ];
 
-const form = document.querySelector('form');
+const form = document.getElementById("form");
 
-form.addEventListener("submit",(e)=>{
+form.addEventListener('submit',(e)=>{
     e.preventDefault()
-    let name = document.getElementById('name').value;
-    let surname = document.getElementById('surname').value;
-    let day = parseInt(document.getElementById('day').value);
-    let month = parseInt(document.getElementById('month').value);
-    let year = parseInt(document.getElementById('year').value);
+    let name = document.getElementById("name").value;
+    const surname = document.getElementById("surname").value;
+    const day = parseInt(document.getElementById("day").value);
+    const month = parseInt(document.getElementById("month").value);
+    const year = parseInt(document.getElementById("year").value);
     
+    console.dir(name);
     const res = `Hello ${name} ${surname} Your zodiac sign is ${zodiacSigns[month-1]}.
     CareerPath is ${careerPath[month-1]}. LoveVibe is ${loveVibes[year%20]}`
 

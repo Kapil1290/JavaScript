@@ -10,33 +10,36 @@
 <body
     style="background: linear-gradient(yellow,red,black); display: flex; justify-content: center; align-items: center; height: 100vh; ">
     <div id="parent"
-        style="border: 1px; display: flex;   justify-content: center; box-shadow: 30px; border-radius: 20px; height: 500px; width: 350px; background: linear-gradient(to left,yellow,white,yellow);">
+        style="border: 1px; display: flex;   justify-content: center; box-shadow: 30px; border-radius: 10px; height: 550px; width: 400px; background: linear-gradient(to left,yellow,white,yellow);">
         <div id="inner">
             <h1 style="margin-top:20px; justify-content: center; display: flex; align-items: center;">Astrology</h1>
             <form id="form" style="align-items: start; text-align: left; font-size: large; padding-top: 20px;">
 
                 <label for="name">Name:</label><br>
-                <input type="text" name="name" placeholder="Enter Here.." required>
+                <input type="text" name="name" id="name" placeholder="Enter Here.." >
                 <br>
                 <label for="surname">Surname:</label><br>
-                <input type="text" name="surname" placeholder="Enter Here..">
+                <input type="text" id="surname" name="surname" placeholder="Enter Here..">
                 <br>
                 <label for="day">Date of Birth(Day):</label><br>
-                <input type="number" name="date" placeholder="Enter Here..">
+                <input type="number" id="day" name="day" placeholder="Enter Here..">
                 <br>
 
                 <label for="month">Month:</label><br>
-                <input type="number" name="month" placeholder="Enter Here..">
+                <input type="number" id="month" name="month" placeholder="Enter Here..">
                 <br>
 
                 <label for="date">Year:</label><br>
-                <input type="number" name="year" placeholder="Enter Here..">
+                <input type="number" id="year" name="year" placeholder="Enter Here..">
                 <br><br>
                 <button type="sumbit">Click to Result</button>
             </form>
-            <h3 id="res">Result: </h3>
+            
+            <div>
+                <h3 style="justify-content: center; display: flex; align-items: center;" id="res">Result: </h3>
+            </div>
         </div>
     </div>
 </body>
-
+<script src="logic.js"></script>
 </html>
