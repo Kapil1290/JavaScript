@@ -3,7 +3,8 @@ setInterval(()=>{
 //for current time 
 // console.log(currentTime)
 //olympic time 
-const olympicTime = new Date(2028,6,23).getTime();
+const olympicTime = new Date(2028,6,14).getTime()  // getTime() method convert 2028,6,14 to timestamp
+
 let remainTime = olympicTime-currentTime;
 
 const day = Math.floor((remainTime)/(1000*60*60*24))
@@ -19,5 +20,5 @@ let sec = Math.floor((remainTime)/(1000))
 remainTime%=1000;
 
 const timer = document.getElementById("timer");
-timer.textContent = `${day}days ${hour}hours ${min}min ${sec}sec`
-})
+timer.textContent = `${day}:Days ${hour}:Hours ${min}:Min ${sec}:Sec`
+},1000)
