@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background: linear-gradient(yellow,red,black); display: flex; justify-content: center; align-items: center; height: 100vh; ">
-    <div id="parent" style="border: 1px; display: flex;   justify-content: center; box-shadow: 30px; border-radius: 20px; height: 500px; width: 350px; background: linear-gradient(to left,yellow,white,yellow);">
+
+<body
+    style="background: linear-gradient(yellow,red,black); display: flex; justify-content: center; align-items: center; height: 100vh; ">
+    <div id="parent"
+        style="border: 1px; display: flex;   justify-content: center; box-shadow: 30px; border-radius: 20px; height: 500px; width: 350px; background: linear-gradient(to left,yellow,white,yellow);">
         <div id="inner">
             <h1 style="margin-top:20px; justify-content: center; display: flex; align-items: center;">Astrology</h1>
-            <form style="align-items: start; text-align: left; font-size: large; padding-top: 20px;">
-                
-                    <label for="name">Name:</label><br>
+            <form id="form" style="align-items: start; text-align: left; font-size: large; padding-top: 20px;">
+
+                <label for="name">Name:</label><br>
                 <input type="text" name="name" placeholder="Enter Here.." required>
                 <br>
                 <label for="surname">Surname:</label><br>
                 <input type="text" name="surname" placeholder="Enter Here..">
-                 <br>
+                <br>
                 <label for="day">Date of Birth(Day):</label><br>
                 <input type="number" name="date" placeholder="Enter Here..">
                 <br>
 
                 <label for="month">Month:</label><br>
-                <input type="number" name="date" placeholder="Enter Here..">
+                <input type="number" name="month" placeholder="Enter Here..">
                 <br>
 
                 <label for="date">Year:</label><br>
-                <input type="number" name="date" placeholder="Enter Here..">
-                <br>
+                <input type="number" name="year" placeholder="Enter Here..">
+                <br><br>
                 <button type="sumbit">Click to Result</button>
             </form>
-            <h1>Result: </h1>
+            <h3 id="res">Result: </h3>
         </div>
     </div>
 </body>
+
 </html>
