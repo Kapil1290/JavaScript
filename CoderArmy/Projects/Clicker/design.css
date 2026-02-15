@@ -1,0 +1,9 @@
+.circle{
+    height: 50px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: grow 5s;
+}
