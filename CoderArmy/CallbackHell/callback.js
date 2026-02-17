@@ -1,11 +1,19 @@
 //zomato app 
 
+const orderDetails ={
+    customer_name: "Kapil",
+    customer_loc: "NewYork Sage Indore",
+    cost: 350,
+    orderId: 12131,
+    food: ["Pizza","coke","Burger"],
+    restorant_loc: "LIG indore"
+}
 
-function paymentOrder(callback){
+function paymentOrder(orderDetails, callback){
     console.log("Payment is in process");
     setTimeout(()=>{
-        console.log("Payment has received and order placed");
-        callback();
+        console.log(`${orderDetails.cost}Rs Payment has received and order placed`);
+        callback(orderDetails);
     }, 4000)
     
 }
@@ -15,9 +23,8 @@ function preparingOrder(callback){
     setTimeout(() => {
         console.log("Order has prepared");
         callback()
-    }, 4000);
+    }, 3000);
 }
-
 
 function pickOrder(callback){
     console.log("Delivery boy is on the way to pick the order")
@@ -31,12 +38,14 @@ function deliveryOrder(){
     console.log("Order has dispatched");
     setTimeout(() => {
         console.log("order successfully arrived")
-    }, 3000);
+    }, 2000);
 }
 
 
-paymentOrder(()=>{
-    preparingOrder(()=>{
-        pickOrder;
+paymentOrder(orderDetails,(orderDetails)=>{
+    preparingOrder(orderDetails,()=>{
+        pickOrder(()=>{                  // we are passing function 
+            deliveryOrder();                // callback inside function
+        })
     });
 });
