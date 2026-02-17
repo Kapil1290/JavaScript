@@ -46,7 +46,7 @@ function deliveryOrder(){
 
 paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
-        pickOrder(()=>{                  // we are passing function 
+        pickOrder(orderDetails,()=>{                  // we are passing function 
             deliveryOrder();                // callback inside function
         })
     });
