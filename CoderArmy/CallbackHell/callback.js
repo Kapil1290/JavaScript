@@ -18,18 +18,20 @@ function paymentOrder(orderDetails, callback){
     
 }
 
-function preparingOrder(callback){
+function preparingOrder(orderDetails,callback){
     console.log("Order is preparing");
     setTimeout(() => {
         console.log("Order has prepared");
-        callback()
+        orderDetails.preparing_status = true;
+        callback(orderDetails)
     }, 3000);
 }
 
-function pickOrder(callback){
-    console.log("Delivery boy is on the way to pick the order")
+function pickOrder(orderDetails, callback){
+    console.log(`Delivery boy is on the way to pick the order from ${restorant_loc}`)
     setTimeout(() => {
         console.log("Order has picked by delivery boy");
+        orderDetails.fetch_delivery_from_resto = true;
         callback();
     }, 2000);
 }
@@ -43,7 +45,7 @@ function deliveryOrder(){
 
 
 paymentOrder(orderDetails,(orderDetails)=>{
-    preparingOrder(orderDetails,()=>{
+    preparingOrder(orderDetails,(orderDetails)=>{
         pickOrder(()=>{                  // we are passing function 
             deliveryOrder();                // callback inside function
         })
