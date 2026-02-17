@@ -10,11 +10,11 @@ function paymentOrder(callback){
     
 }
 
-function preparingOrder(){
+function preparingOrder(callback){
     console.log("Order is preparing");
     setTimeout(() => {
         console.log("Order has prepared");
-        
+        callback()
     }, 4000);
 }
 
@@ -27,5 +27,5 @@ function deliveryOrder(){
 
 
 paymentOrder(()=>{
-    preparingOrder();
+    preparingOrder(deliveryOrder);
 });
