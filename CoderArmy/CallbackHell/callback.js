@@ -18,6 +18,15 @@ function preparingOrder(callback){
     }, 4000);
 }
 
+
+function pickOrder(callback){
+    console.log("Delivery boy is on the way to pick the order")
+    setTimeout(() => {
+        console.log("Order has picked by delivery boy");
+        callback();
+    }, 2000);
+}
+
 function deliveryOrder(){
     console.log("Order has dispatched");
     setTimeout(() => {
@@ -27,5 +36,7 @@ function deliveryOrder(){
 
 
 paymentOrder(()=>{
-    preparingOrder(deliveryOrder);
+    preparingOrder(()=>{
+        pickOrder;
+    });
 });
