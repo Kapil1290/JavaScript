@@ -30,6 +30,7 @@ async function git(){
     for(let i=0; i<info.length; i++){
         const innerdiv = document.createElement('div');
         innerdiv.classList.add("user");
+
         const image = document.createElement('img');
         image.src = info[i].avatar_url;
         
@@ -38,7 +39,11 @@ async function git(){
 
         const anchor = document.createElement('a');
         anchor.href = info[i].url;
-        anchor.textContent = "Visit Profile"
+        anchor.textContent = "Visit Profile";
+
+        innerdiv.append(image,name,anchor)
+
+        div.append(innerdiv);
     }
 }
 
