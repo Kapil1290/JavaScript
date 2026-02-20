@@ -62,6 +62,8 @@ git();
 
 
 
+
+
 const orderDetails ={
     customer_name: "Kapil",
     customer_loc: "NewYork Sage Indore",
@@ -133,3 +135,30 @@ function deliveryOrder(callback){
     
     })
 }
+
+
+// paymentOrder(orderDetails)
+// .then((orderDetails)=>preparingOrder(orderDetails))
+// .then((orderDetails)=>pickOrder(orderDetails))
+// .then((orderDetails)=>deliveryOrder(orderDetails))
+// .then((orderDetails)=>{
+//     console.log(orderDetails);
+// })
+// .catch((err)=>{
+//     console.log(`Error: ${err}`)
+// })
+
+
+async function ordering() {
+    try {
+    const res1 = paymentOrder(orderDetails)
+    const res2 = preparingOrder(res1);
+    const res3 = preparingOrder(res2);
+    const res4 = preparingOrder(res3);
+    console.log(res4);
+
+    } catch (error) {
+        console.log("Error",error)
+    }
+}
+
