@@ -19,6 +19,8 @@ body{
 .user{
     width: 140px;
     align-items: center;
+    border: 3px;
+    border-color: white;
 }
 
 img{
