@@ -33,6 +33,7 @@ async function git(){
     
     const div = document.getElementById("first")
     for(let i=0; i<info.length; i++){
+        
         const innerdiv = document.createElement('div');
         innerdiv.classList.add("user");
 
