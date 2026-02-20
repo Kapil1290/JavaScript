@@ -30,6 +30,7 @@ async function git(){
     for(let i=0; i<info.length; i++){
         const innerdiv = document.createElement('div');
         innerdiv.classList.add("user");
+        innerdiv.id = "inner";
 
         const image = document.createElement('img');
         image.src = info[i].avatar_url;

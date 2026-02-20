@@ -19,8 +19,8 @@ body{
 .user{
     width: 140px;
     align-items: center;
-    border: 3px;
-    border-color: white;
+    border: 2px white;
+    border-radius: 5px;
 }
 
 img{
@@ -38,6 +38,11 @@ h1{
 h2{
     font-size: 20px;
 
+}
+
+#inner{
+    border: 3px;
+    border-color: white;
 }
 
 a{
