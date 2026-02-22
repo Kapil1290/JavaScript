@@ -17,12 +17,13 @@ console.log(obj.toString())
 
 const obj1 = {
     account:23,
-    // name:"Tarun"
 }
 
-obj1.__proto__=obj;
+// obj1.__proto__=obj;
 
-// console.log(obj1.name)
+const obj2 = Object.create(obj1)
+
+console.log(obj2.name)
 // const a = obj1.hasOwnProperty("name")
 // console.log(a)
 
@@ -52,7 +53,7 @@ class customer extends person{
     constructor(name,age,account,balance){
         super(name,age);
         this.account = account;
-        this.address = address;
+        this.balance = balance;
     }
 
     checkBalance(){
@@ -62,3 +63,6 @@ class customer extends person{
 
 
 const cust1 = new customer("kapil",20,123,2000)
+
+const bal = cust1.checkBalance();
+console.log(bal)
