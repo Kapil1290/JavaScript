@@ -22,9 +22,9 @@ const obj1 = {
 
 obj1.__proto__=obj;
 
-console.log(obj1.name)
-const a = obj1.hasOwnProperty("name")
-console.log(a)
+// console.log(obj1.name)
+// const a = obj1.hasOwnProperty("name")
+// console.log(a)
 
 
 
@@ -39,3 +39,7 @@ class person{
     }
 
 }
+
+const person1 = new person("Kapil",20)
+
+console.log(person1.name)
