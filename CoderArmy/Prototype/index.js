@@ -46,3 +46,12 @@ const person1 = new person("Kapil",20)
 // console.log(fun)
 
 console.log(person1)
+
+
+class customer extends person{
+    constructor(name,age,account,address){
+        super(name,age);
+        this.account = account;
+        this.address = address;
+    }
+}
