@@ -49,9 +49,16 @@ console.log(person1)
 
 
 class customer extends person{
-    constructor(name,age,account,address){
+    constructor(name,age,account,balance){
         super(name,age);
         this.account = account;
         this.address = address;
     }
+
+    checkBalance(){
+        return this.balance;
+    }
 }
+
+
+const cust1 = new customer("kapil",20,123,2000)
