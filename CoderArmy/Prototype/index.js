@@ -42,4 +42,5 @@ class person{
 
 const person1 = new person("Kapil",20)
 
-console.log(person1.name)
+const fun =  person1.sayhi()
+console.log(fun)
