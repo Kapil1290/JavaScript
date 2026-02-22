@@ -23,4 +23,19 @@ const obj1 = {
 obj1.__proto__=obj;
 
 console.log(obj1.name)
-console.log(obj1.hasOwnProperty("name"))
+const a = obj1.hasOwnProperty("name")
+console.log(a)
+
+
+
+class person{
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+
+    sayhi(){
+        console.log(`Hello ${this.name}` )
+    }
+
+}
