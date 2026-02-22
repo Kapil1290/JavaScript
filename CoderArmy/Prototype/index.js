@@ -7,4 +7,7 @@ const obj = {
     }
 }
 
-console.log(obj.name);
+// console.log(obj.name);
+
+console.log(obj.greet())
+console.log(obj.hasOwnProperty("name"))
