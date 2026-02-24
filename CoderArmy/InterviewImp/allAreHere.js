@@ -75,11 +75,11 @@ const user1 = {
 // user1.greet()
 
 
-// 'use strict'  // it refers to make behave logically
-// function greet(){
-//     console.log(this)   
-// }
-// greet()       // check left who invoke and those who will present then this will point to them  but In non strict mode it point to global obj
+'use strict'  // it refers to make behave logically
+function greet(){
+    console.log(this)   
+}
+greet()       // check left who invoke and those who will present then this will point to them  but In non strict mode it point to global obj
 
 
 
@@ -96,8 +96,8 @@ class person{
 // In class constuctor 'this' points to the newly created object
 // this = {name:"Tarun"}
 
-const p1 = new person("Tarun",23)
-console.log(p1)
+// const p1 = new person("Tarun",23)
+// console.log(p1)
 
 
 
@@ -106,11 +106,11 @@ console.log(p1)
 
 
 // 'use strict'
-const funn = ()=>{
-    console.log(this)   
-}
+// const funn = ()=>{
+//     console.log(this)    // it take this from outside like from console.log(this)
+// }
 
-funn();
+// funn();
 
 
 const timer = {
@@ -123,7 +123,7 @@ const timer = {
     }
 }
 
-timer.start()
+// timer.start()
 
 
 
