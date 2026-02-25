@@ -29,33 +29,33 @@
 
 
 
-function greet(){
-    console.log(`hi ${this.name}`)   
-}
+// function greet(){
+//     console.log(`hi ${this.name}`)   
+// }
 
-function inc(val){
-    this.age+=val;
-    console.log(this.age);
-}
+// function inc(val){
+//     this.age+=val;
+//     console.log(this.age);
+// }
 
-function rem(name,age){
-    console.log(this.name)
-    this.name = name;
-    console.log(this.name)
-    // this.age = name[1];
-    // console.log(this.age)
-    console.log(`Name: ${name} and Age: ${age}`)
-}
+// function rem(name,age){
+//     console.log(this.name)
+//     this.name = name;
+//     console.log(this.name)
+//     // this.age = name[1];
+//     // console.log(this.age)
+//     console.log(`Name: ${name} and Age: ${age}`)
+// }
 
-const user = {
-    name: "Kapil",
-    age:23
-}
+// const user = {
+//     name: "Kapil",
+//     age:23
+// }
 
-const user1 = {
-    name:"Ajay",
-    age:22
-}
+// const user1 = {
+//     name:"Ajay",
+//     age:22
+// }
 
 // greet.call(user)
 // greet.call(user1)
@@ -75,11 +75,11 @@ const user1 = {
 // user1.greet()
 
 
-'use strict'  // it refers to make behave logically
-function greet(){
-    console.log(this)   
-}
-greet()       // check left who invoke and those who will present then this will point to them  but In non strict mode it point to global obj
+// 'use strict'  // it refers to make behave logically
+// function greet(){
+//     console.log(this)    
+// }
+// greet();       // check left who invoke and those who will present then this will point to them if non strict mode then point to global obj but In non strict mode it point to global obj
 
 
 
@@ -96,8 +96,8 @@ class person{
 // In class constuctor 'this' points to the newly created object
 // this = {name:"Tarun"}
 
-// const p1 = new person("Tarun",23)
-// console.log(p1)
+const p1 = new person("Tarun",23)
+console.log(p1)
 
 
 
@@ -113,17 +113,23 @@ class person{
 // funn();
 
 
-const timer = {
-    second : 0,
-    start : function(){
-        setInterval(()=>{
-            this.second++;          // look outside
-            console.log(this.second)
-        },500)
-    }
-}
+// const timer = {
+//     second : 0,
+//     start : function(){
+//         setInterval(()=>{
+//             this.second++;          // look outside
+//             console.log(this.second)
+//         },500)
+//     }
+// }
 
 // timer.start()
 
 
+
+'use strict'  // it refers to make behave logically
+function greet(){
+    console.log(this);   
+}
+greet();    
 
