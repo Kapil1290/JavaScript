@@ -104,7 +104,7 @@
 // Arrow function: this doesn't exist for Arrow function
 // Arrow fun. use Lexical scope means look outside of function
 
-
+Microsoft.QuickAction.WiFi
 // 'use strict'
 // const funn = ()=>{
 //     console.log(this)    // it take this from outside like from console.log(this)
