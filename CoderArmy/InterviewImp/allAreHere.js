@@ -81,23 +81,23 @@
 // }
 // greet();       // check left who invoke and those who will present then this will point to them if non strict mode then point to global obj but In non strict mode it point to global obj
 
-
+// If no object associate with this keyword then IN STRICT MODE points to UNDEFINED and IN NON STRICT MODE points to OBJECT
 
 //class
 
-class person{
-    constructor(name,age){
-        this.name = name;
-        this.age = age;
-    }
-}
+// class person{
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
 
 
 // In class constuctor 'this' points to the newly created object
 // this = {name:"Tarun"}
 
-const p1 = new person("Tarun",23)
-console.log(p1)
+// const p1 = new person("Tarun",23)
+// console.log(p1)
 
 
 
@@ -125,7 +125,8 @@ console.log(p1)
 
 // timer.start()
 
-
+// 'use strict'
+// console.log(this)
 
 'use strict'  // it refers to make behave logically
 function greet(){
