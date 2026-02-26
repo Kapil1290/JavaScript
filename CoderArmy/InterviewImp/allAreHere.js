@@ -25,7 +25,7 @@
 // Learn about this keyword
 
 
-// console.log(this)   // In node env. points to empty obj but in browser points to window  for both strict and non strict
+console.log(this)   // In node env. points to empty obj but in browser points to window  for both strict and non strict
 
 
 
@@ -104,13 +104,13 @@
 // Arrow function: this doesn't exist for Arrow function
 // Arrow fun. use Lexical scope means look outside of function
 
-Microsoft.QuickAction.WiFi
+
 // 'use strict'
 // const funn = ()=>{
 //     console.log(this)    // it take this from outside like from console.log(this)
 // }
 
-// funn();
+// funn();  //--> point to empty object
 
 
 // const timer = {
@@ -128,9 +128,9 @@ Microsoft.QuickAction.WiFi
 // 'use strict'
 // console.log(this)
 
-'use strict'  // it refers to make behave logically
-function greet(){
-    console.log(this);   
-}
-greet();    
+// 'use strict'  // it refers to make behave logically
+// function greet(){
+//     console.log(this);   
+// }
+// greet();    
 
