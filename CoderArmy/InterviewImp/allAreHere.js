@@ -1,6 +1,4 @@
-//this call bind
-//this: class and obj method but we also use in other
-//strict mode vs non strict mode
+//
 
 // 'use strict'
 
@@ -9,7 +7,9 @@
 // console.log(a,b)
 
 // function greet(name,name1){
-//     console.log(name,name1);  // take last value of parameter
+//     console.log(name,name1);  // take lthis call bind
+//this: class and obj method but we also use in other
+//strict mode vs non strict modeast value of parameter
 // }
 
 // greet("Rohit","Mohit")
