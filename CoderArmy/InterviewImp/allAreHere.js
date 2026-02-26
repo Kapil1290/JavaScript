@@ -25,7 +25,7 @@
 // Learn about this keyword
 
 
-console.log(this)   // In node env. points to empty obj but in browser points to window  for both strict and non strict
+// console.log(this)   // In node env. points to empty obj but in browser points to window  for both strict and non strict
 
 
 
@@ -75,11 +75,11 @@ console.log(this)   // In node env. points to empty obj but in browser points to
 // user1.greet()
 
 
-// 'use strict'  // it refers to make behave logically
-// function greet(){
-//     console.log(this)    
-// }
-// greet();       // check left who invoke and those who will present then this will point to them if non strict mode then point to global obj but In non strict mode it point to global obj
+'use strict'  // it refers to make behave logically
+function greet(){
+    console.log(this)    
+}
+greet();       // check left who invoke and those who will present then this will point to them if non strict mode then point to global obj but In non strict mode it point to global obj
 
 // If no object associate with this keyword then IN STRICT MODE points to UNDEFINED and IN NON STRICT MODE points to OBJECT
 
