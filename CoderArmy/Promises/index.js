@@ -18,6 +18,7 @@ p2.then((res)=>{
 
 
 //promises chaining
+
 // fetch("https://api.github.com/users").then((res)=>{
 //     if(!res.ok){
 //         const div = document.getElementById("first");
