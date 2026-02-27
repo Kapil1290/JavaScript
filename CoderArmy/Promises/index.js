@@ -52,7 +52,7 @@ p2.then((res)=>{
 
 
 
-// convert javascript object to JSON
+// convert javascript Object to 
 
 // const a1 = {
 //     name:"kapil",
@@ -61,14 +61,18 @@ p2.then((res)=>{
 //     c: null
 // }
 
-// const jsFormat = `{"name":"kapil","age":23,"add":"indore"}`;
+const jsonData = JSON.stringify(a1)
+console.log(jsonData)
 
-// const jsObject = JSON.parse(jsFormat)
-// console.log(jsObject)
+// JSON---OR---JSON to Object
+
+const jsFormat = `{"name":"kapil","age":23,"add":"indore"}`;
+
+const jsObject = JSON.parse(jsFormat)
+console.log(jsObject)
     
 
-// const jsonData = JSON.stringify(a1)
-// console.log(jsonData)
+
 
 
 
