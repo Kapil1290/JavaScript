@@ -64,8 +64,8 @@ p2.then((res)=>{
 const jsonData = JSON.stringify(a1)
 console.log(jsonData)
 
-// JSON---OR---JSON to Object
 
+// JSON---OR---JSON to Object
 const jsFormat = `{"name":"kapil","age":23,"add":"indore"}`;
 
 const jsObject = JSON.parse(jsFormat)
