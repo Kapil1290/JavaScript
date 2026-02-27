@@ -1,5 +1,3 @@
-//
-
 // 'use strict'
 
 // var a=10;
@@ -79,9 +77,9 @@
 function greet(){
     console.log(this)    
 }
-greet();       // check left who invoke and those who will present then this will point to them if non strict mode then point to global obj but In non strict mode it point to global obj
+greet();      // If no object associate with this keyword then IN STRICT MODE points to UNDEFINED and IN NON STRICT MODE points to OBJECT
 
-// If no object associate with this keyword then IN STRICT MODE points to UNDEFINED and IN NON STRICT MODE points to OBJECT
+
 
 //class
 
