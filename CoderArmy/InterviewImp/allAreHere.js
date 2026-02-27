@@ -23,7 +23,7 @@
 // Learn about this keyword
 
 
-// console.log(this)   // In node env. points to empty obj but in browser points to window  for both strict and non strict
+// console.log(this)   // In node env. points to empty obj But In browser points to window  for both strict and non strict
 
 
 
