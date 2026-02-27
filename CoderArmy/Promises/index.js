@@ -10,7 +10,8 @@ const p2 = p1.then((res)=>{
 })
 
 p2.then((res)=>{
-    console.log(res);
+    console.log(res.customer_name);
+    
 })
 
 
@@ -152,13 +153,13 @@ function deliveryOrder(callback){
 // pickOrder(orderDetails);
 // deliveryOrder()
 
-paymentOrder(orderDetails)
-.then((orderDetails)=>preparingOrder(orderDetails))
-.then((orderDetails)=>pickOrder(orderDetails))
-.then((orderDetails)=>deliveryOrder(orderDetails))
-.then((orderDetails)=>{
-    console.log(orderDetails);
-})
-.catch((err)=>{
-    console.log(`Error: ${err}`)
-})
+// paymentOrder(orderDetails)
+// .then((orderDetails)=>preparingOrder(orderDetails))
+// .then((orderDetails)=>pickOrder(orderDetails))
+// .then((orderDetails)=>deliveryOrder(orderDetails))
+// .then((orderDetails)=>{
+//     console.log(orderDetails);
+// })
+// .catch((err)=>{
+//     console.log(`Error: ${err}`)
+// })
