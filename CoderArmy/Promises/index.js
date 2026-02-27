@@ -10,7 +10,7 @@ const p2 = p1.then((res)=>{
 })
 
 p2.then((res)=>{
-    console.log(res.customer_name);
+    console.log(res[0].login);
     
 })
 
