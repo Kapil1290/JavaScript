@@ -3,7 +3,7 @@ console.log("Starting......");
 // const p1 = fetch("https://api.github.com/users");
 
 
-// // fullfilled or reject
+// fullfilled or reject
 
 // const p2 = p1.then((res)=>{
 //     return res.json();
@@ -25,7 +25,7 @@ console.log("Starting......");
 //     return res.json();
 // })
 // .then((res)=>{
-//     // console.log(res)
+// console.log(res)
 
 //     const div = document.getElementById("first");
 //     for(let i=0; i<res.length; i++){
