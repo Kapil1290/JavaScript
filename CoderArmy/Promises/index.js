@@ -52,7 +52,7 @@ p2.then((res)=>{
 
 
 
-// convert javascript Object to 
+// convert javascript Object to JSON
 
 // const a1 = {
 //     name:"kapil",
@@ -65,7 +65,7 @@ p2.then((res)=>{
 // console.log(jsonData)
 
 
-// JSON---OR---JSON to Object
+// JSON to Object
 
 const jsFormat = `{"name":"kapil","age":23,"add":"indore"}`;
 
