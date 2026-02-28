@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Matcher</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 40px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 100%; max-width: 500px; }
+        h2 { color: #1a73e8; margin-top: 0; }
+        textarea, input { width: 100%; margin-bottom: 20px; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 6px; }
+        button { width: 100%; background: #1a73e8; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        button:disabled { background: #ccc; }
+        #results { margin-top: 25px; display: none; border-top: 2px solid #eee; padding-top: 20px; }
+        .score { font-size: 32px; font-weight: bold; color: #34a853; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>AI Resume Analyser</h2>
+        <form id="resumeForm">
+            <label>Upload Resume (PDF)</label>
+            <input type="file" id="resumeFile" accept=".pdf" required>
+
+            <label>Job Description</label>
+            <textarea id="jobDesc" rows="6" placeholder="Paste the job requirements here..." required></textarea>
+
+            <button type="submit" id="submitBtn">Analyze Now</button>
+        </form>
+
+        <div id="results">
+            <div class="score"><span id="scoreText">0</span>% Match</div>
+            <p><strong>Missing Skills:</strong> <span id="skillsText"></span></p>
+            <p><strong>AI Feedback:</strong> <span id="feedbackText"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
