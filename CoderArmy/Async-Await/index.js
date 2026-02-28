@@ -137,16 +137,16 @@ function deliveryOrder(orderDetails){
 }
 
 
-// // paymentOrder(orderDetails)
-// // .then((orderDetails)=>preparingOrder(orderDetails))
-// // .then((orderDetails)=>pickOrder(orderDetails))
-// // .then((orderDetails)=>deliveryOrder(orderDetails))
-// // .then((orderDetails)=>{
-// //     console.log(orderDetails);
-// // })
-// // .catch((err)=>{
-// //     console.log(`Error: ${err}`)
-// // })
+// paymentOrder(orderDetails)
+// .then((orderDetails)=>preparingOrder(orderDetails))
+// .then((orderDetails)=>pickOrder(orderDetails))
+// .then((orderDetails)=>deliveryOrder(orderDetails))
+// .then((orderDetails)=>{
+//     console.log(orderDetails);
+// })
+// .catch((err)=>{
+//     console.log(`Error: ${err}`)
+// })
 
 
 async function ordering() {
