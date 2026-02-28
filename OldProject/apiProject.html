@@ -1,83 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Resume Analyser</title>
     <style>
-        body { font-family: sans-serif; background: #f4f4f9; padding: 20px; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        textarea, input { width: 100%; margin-bottom: 15px; display: block; }
-        button { background: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; }
-        button:disabled { background: #ccc; }
-        #result { margin-top: 20px; padding: 15px; border-top: 1px solid #ddd; display: none; }
-        .score { font-size: 24px; font-weight: bold; color: #28a745; }
+        body {
+            font-family: sans-serif;
+            background: #f4f4f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea,
+        input {
+            width: 100%;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:disabled {
+            background: #ccc;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            display: none;
+        }
+
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+        }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>AI Resume Analyser</h1>
-    
-    <label>Upload Resume (PDF):</label>
-    <input type="file" id="resumeInput" accept=".pdf">
+    <div class="container">
+        <h1>AI Resume Analyser</h1>
 
-    <label>Job Description:</label>
-    <textarea id="jobDescInput" rows="5" placeholder="Paste requirements here..."></textarea>
+        <form action="">
+            <label>Upload Resume (PDF):</label>
+            <input type="file" id="resumeInput" accept=".pdf">
 
-    <button id="analyzeBtn">Analyze Resume</button>
+            <label>Job Description:</label>
+            <textarea id="jobDescInput" rows="5" placeholder="Paste requirements here..."></textarea>
 
-    <div id="result">
-        <h3>Analysis Result</h3>
-        <p>Match Score: <span id="matchScore" class="score"></span>%</p>
-        <p><strong>Missing Keywords:</strong> <span id="missingKeys"></span></p>
-        <p><strong>Feedback:</strong> <span id="summary"></span></p>
+            <button id="analyzeBtn">Analyze Resume</button>
+        </form>
+
+        <div id="result">
+            <h3>Analysis Result</h3>
+            <p>Match Score: <span id="matchScore" class="score"></span>%</p>
+            <p><strong>Missing Keywords:</strong> <span id="missingKeys"></span></p>
+            <p><strong>Feedback:</strong> <span id="summary"></span></p>
+        </div>
     </div>
-</div>
 
-<script>
-    const analyzeBtn = document.getElementById('analyzeBtn');
-    
-    analyzeBtn.addEventListener('click', async () => {
-        const fileInput = document.getElementById('resumeInput');
-        const jobDesc = document.getElementById('jobDescInput').value;
+    <script>
+        const analyzeBtn = document.getElementById('analyzeBtn');
 
-        if (!fileInput.files[0] || !jobDesc) {
-            return alert("Please select a file and paste a job description.");
-        }
+        analyzeBtn.addEventListener('click', async () => {
+            const fileInput = document.getElementById('resumeInput');
+            const jobDesc = document.getElementById('jobDescInput').value;
 
-        analyzeBtn.disabled = true;
-        analyzeBtn.innerText = "Analyzing...";
+            if (!fileInput.files[0] || !jobDesc) {
+                return alert("Please select a file and paste a job description.");
+            }
 
-        // Use FormData to send file + text
-        const formData = new FormData();
-        formData.append('resume', fileInput.files[0]);
-        formData.append('jobDescription', jobDesc);
+            analyzeBtn.disabled = true;
+            analyzeBtn.innerText = "Analyzing...";
 
-        try {
-            // Using native Fetch API instead of Axios
-            const response = await fetch('http://localhost:5000/api/analyze', {
-                method: 'POST',
-                body: formData
-            });
+            // Use FormData to send file + text
+            const formData = new FormData();
+            formData.append('resume', fileInput.files[0]);
+            formData.append('jobDescription', jobDesc);
 
-            const data = await response.json();
+            try {
+                // Using native Fetch API instead of Axios
+                const response = await fetch('http://localhost:5000/api/analyze', {
+                    method: 'POST',
+                    body: formData
+                });
 
-            // Update UI with results
-            document.getElementById('result').style.display = 'block';
-            document.getElementById('matchScore').innerText = data.matchPercentage;
-            document.getElementById('missingKeys').innerText = data.missingKeywords.join(', ');
-            document.getElementById('summary').innerText = data.summary;
+                const data = await response.json();
 
-        } catch (error) {
-            console.error("Error:", error);
-            alert("Something went wrong!");
-        } finally {
-            analyzeBtn.disabled = false;
-            analyzeBtn.innerText = "Analyze Resume";
-        }
-    });
-</script>
+                // Update UI with results
+                document.getElementById('result').style.display = 'block';
+                document.getElementById('matchScore').innerText = data.matchPercentage;
+                document.getElementById('missingKeys').innerText = data.missingKeywords.join(', ');
+                document.getElementById('summary').innerText = data.summary;
+
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Something went wrong!");
+            } finally {
+                analyzeBtn.disabled = false;
+                analyzeBtn.innerText = "Analyze Resume";
+            }
+        });
+    </script>
 
 </body>
+
 </html>
