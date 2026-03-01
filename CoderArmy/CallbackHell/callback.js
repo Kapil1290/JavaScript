@@ -47,23 +47,23 @@ function deliveryOrder(){
 //     deliveryOrder(orderDetails);
 // }
 
-// paymentOrder(orderDetails,(orderDetails)=>{
-//     preparingOrder(orderDetails,(orderDetails)=>{
-//         pickOrder(orderDetails,()=>{                  // we are passing function 
-//             deliveryOrder();                // callback inside function
-//         })
-//     });
-// });
+paymentOrder(orderDetails,(orderDetails)=>{
+    preparingOrder(orderDetails,(orderDetails)=>{
+        pickOrder(orderDetails,()=>{                  // we are passing function 
+            deliveryOrder();                // callback inside function
+            console.log(orderDetails)
+        })
+    });
+});
 
 
 paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
         pickOrder(orderDetails,(orderDetails)=>{
-            deliveryOrder((orderDetails)=>{
-                console.log(orderDetails);
-            });
+            deliveryOrder();
+            console.log(orderDetails)
         })
     })
 })
 
-console.log(orderDetails)
+// console.log(orderDetails)
