@@ -52,7 +52,7 @@ paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
         pickOrder(orderDetails,(orderDetails)=>{                  // we are passing function 
             deliveryOrder((orderDetails)=>{
-                console.log(orderDetails)
+                console.log(orderDetails);
             })
         })
     });
