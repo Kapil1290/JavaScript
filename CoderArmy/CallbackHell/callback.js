@@ -59,7 +59,11 @@ function deliveryOrder(){
 paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
         pickOrder(orderDetails,(orderDetails)=>{
-            deliveryOrder();
+            deliveryOrder((orderDetails)=>{
+                console.log(orderDetails);
+            });
         })
     })
 })
+
+console.log(orderDetails)
