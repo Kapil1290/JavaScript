@@ -47,10 +47,21 @@ const callback = ()=>{
     deliveryOrder(orderDetails);
 }
 
+// paymentOrder(orderDetails,(orderDetails)=>{
+//     preparingOrder(orderDetails,(orderDetails)=>{
+//         pickOrder(orderDetails,()=>{                  // we are passing function 
+//             deliveryOrder();                // callback inside function
+//         })
+//     });
+// });
+
+
 paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
-        pickOrder(orderDetails,()=>{                  // we are passing function 
-            deliveryOrder();                // callback inside function
+        pickOrder(orderDetails,(orderDetails)=>{
+            deliveryOrder((orderDetails)=>{
+                console.log(orderDetails);
+            })
         })
-    });
-});
+    })
+})
