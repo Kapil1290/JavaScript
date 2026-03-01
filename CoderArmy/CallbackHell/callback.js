@@ -14,7 +14,7 @@ function paymentOrder(orderDetails, callback){
     setTimeout(()=>{
         console.log(`${orderDetails.cost}Rs Payment has received and order placed`);
         callback(orderDetails);
-    }, 4000)
+    }, 1000)
     
 }
 
@@ -24,7 +24,7 @@ function preparingOrder(orderDetails,callback){
         console.log("Order has prepared");
         orderDetails.preparing_status = true;
         callback(orderDetails)
-    }, 3000);
+    }, 1000);
 }
 
 function pickOrder(orderDetails, callback){
@@ -33,14 +33,14 @@ function pickOrder(orderDetails, callback){
         console.log("Order has picked by delivery boy");
         orderDetails.fetch_delivery_from_resto = true;
         callback();
-    }, 2000);
+    }, 1000);
 }
 
-function deliveryOrder(orderDetails,callback){
+function deliveryOrder(callback){
     console.log("Order has dispatched");
     setTimeout(() => {
         console.log("order successfully arrived")
-    }, 2000);
+    }, 1000);
 }
 
 // const callback = ()=>{
@@ -59,9 +59,8 @@ function deliveryOrder(orderDetails,callback){
 paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
         pickOrder(orderDetails,(orderDetails)=>{
-            deliveryOrder(orderDetails,(orderDetails)=>{
-                console.log(orderDetails);
-            })
+            deliveryOrder();
+            console.log(orderDetails)
         })
     })
 })
