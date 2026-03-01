@@ -36,16 +36,16 @@ function pickOrder(orderDetails, callback){
     }, 2000);
 }
 
-function deliveryOrder(callback){
+function deliveryOrder(orderDetails,callback){
     console.log("Order has dispatched");
     setTimeout(() => {
         console.log("order successfully arrived")
     }, 2000);
 }
 
-const callback = ()=>{
-    deliveryOrder(orderDetails);
-}
+// const callback = ()=>{
+//     deliveryOrder(orderDetails);
+// }
 
 // paymentOrder(orderDetails,(orderDetails)=>{
 //     preparingOrder(orderDetails,(orderDetails)=>{
@@ -59,7 +59,7 @@ const callback = ()=>{
 paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
         pickOrder(orderDetails,(orderDetails)=>{
-            deliveryOrder((orderDetails)=>{
+            deliveryOrder(orderDetails,(orderDetails)=>{
                 console.log(orderDetails);
             })
         })
