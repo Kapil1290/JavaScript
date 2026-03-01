@@ -41,31 +41,17 @@ function deliveryOrder(callback){
     setTimeout(() => {
         console.log("order successfully arrived")
     }, 1000);
-    return orderDetails;
 }
 
-// const callback = ()=>{
-//     deliveryOrder(orderDetails);
-// }
+const callback = ()=>{
+    deliveryOrder(orderDetails);
+}
 
 paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
-        pickOrder(orderDetails,(orderDetails)=>{                  // we are passing function 
-            deliveryOrder((orderDetails)=>{
-                console.log(orderDetails);
-            })
+        pickOrder(orderDetails,()=>{                  // we are passing function 
+            deliveryOrder();                // callback inside function
+            console.log(orderDetails)
         })
     });
 });
-
-
-// paymentOrder(orderDetails,(orderDetails)=>{
-//     preparingOrder(orderDetails,(orderDetails)=>{
-//         pickOrder(orderDetails,()=>{
-//             deliveryOrder()
-//             console.log(orderDetails)
-//         })
-//     })
-// })
-
-// console.log(orderDetails)
