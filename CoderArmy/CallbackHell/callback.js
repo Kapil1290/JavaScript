@@ -51,8 +51,8 @@ function deliveryOrder(callback){
 paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
         pickOrder(orderDetails,(orderDetails)=>{                  // we are passing function 
-            deliveryOrder(()=>{
-                
+            deliveryOrder((orderDetails)=>{
+                console.log(orderDetails)
             })
         })
     });
