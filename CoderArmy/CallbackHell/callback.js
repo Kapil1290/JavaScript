@@ -36,7 +36,7 @@ function pickOrder(orderDetails, callback){
     }, 1000);
 }
 
-function deliveryOrder(callback){
+function deliveryOrder(){
     console.log("Order has dispatched");
     setTimeout(() => {
         console.log("order successfully arrived")
@@ -60,7 +60,6 @@ paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
         pickOrder(orderDetails,(orderDetails)=>{
             deliveryOrder();
-            console.log(orderDetails)
         })
     })
 })
