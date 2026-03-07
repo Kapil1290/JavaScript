@@ -60,11 +60,11 @@ console.log(arr1)  // it create array inside array
 // console.log(arr3)
 
 //spread operator
-const arr3 = [...arr1,...arr2,...arr4]  // it spread and show
-console.log(typeof arr3)
+const arr3 = [...arr1,...arr2,...arr4]  // it spread and show/we can merge two arrays
+// console.log(arr3)
 
-// const names = ["Alice","Bob","Carni","Carni", "Shraddha", "Rohit", "alina"]
-// console.log(names.toString())
+const names = ["Alice","Bob","Carni","Carni", "Shraddha", "Rohit", "alina"]
+console.log(names.toString())
 // console.log(names.join(" # "))
 
 // console.log(names.indexOf("Carni"))
