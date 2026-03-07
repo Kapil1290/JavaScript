@@ -36,8 +36,8 @@ let marks = [100,20,33,49,28,49]
 // }
 
 
-let val1 = marks;
-// val1[0] = "Hello Guys"
+let val1 = marks;    //  marks is array and we are assigning
+val1[0] = "Hello Guys"
 // console.log(marks)
 console.log(val1)    //both same because they refer same reference in memory
 
