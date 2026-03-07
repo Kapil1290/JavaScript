@@ -36,10 +36,10 @@ let marks = [100,20,33,49,28,49]
 // }
 
 
-// let val1 = marks;
+let val1 = marks;
 // val1[0] = "Hello Guys"
 // console.log(marks)
-// console.log(val1)    //both same because they refer same reference in memory
+console.log(val1)    //both same because they refer same reference in memory
 
 // const numArr = [12,22,32,12,43]  // const marks non changable values
 // numArr[2] = 11
@@ -49,8 +49,8 @@ let marks = [100,20,33,49,28,49]
 
 
 const arr1 = [12,44,54,32,54]
-const arr2 = ["kapil",23,33]
-const arr4 = ["naman",34,false]
+// const arr2 = ["kapil",23,33]
+// const arr4 = ["naman",34,false]
 // arr1.push(arr2)
 // console.log(arr1)  // it create array inside array
 // const arr3 = arr1.concat(arr2)  // add two arrays
