@@ -55,12 +55,13 @@ const arr4 = ["naman",34,false]
 // arr1.push(arr2)
 // arr1.push(arr4)
 console.log(arr1)  // it create array inside array
-const arr3 = arr1.concat(arr2)  // add two arrays
-console.log(arr3)
 
-// //spread operator
-// const arr3 = [...arr1,...arr2,...arr4]  // it spread and show
+// const arr3 = arr1.concat(arr2)  // add two arrays
 // console.log(arr3)
+
+//spread operator
+const arr3 = [...arr1,...arr2,...arr4]  // it spread and show
+console.log(typeof arr3)
 
 // const names = ["Alice","Bob","Carni","Carni", "Shraddha", "Rohit", "alina"]
 // console.log(names.toString())
