@@ -43,17 +43,17 @@ val1[0] = "Hello Guys"
 
 const numArr = [12,22,32,12,43]  // In const array, we can change the values or push new element but can't asign new arraay
 numArr[2] = 11
-console.log(numArr.slice(2,4)) // no change in original array
+// console.log(numArr.slice(2,4)) // no change in original array
 
-console.log(numArr.splice(1,1,"kapil",18))  //it affect the original array / first para-->from which index and sec. para-->how many elements and next para for insert this 
+numArr.splice(1,1,"kapil",18) //it affect the original array / first para-->from which index and sec. para-->how many elements and next para for insert this 
 console.log(numArr)
 
 
-// const arr1 = [12,44,54,32,54]
-// const arr2 = ["kapil",23,33]
-// const arr4 = ["naman",34,false]
-// arr1.push(arr2)
-// console.log(arr1)  // it create array inside array
+const arr1 = [12,44,54,32,54]
+const arr2 = ["kapil",23,33]
+const arr4 = ["naman",34,false]
+arr1.push(arr2)
+console.log(arr1)  // it create array inside array
 // const arr3 = arr1.concat(arr2)  // add two arrays
 
 
