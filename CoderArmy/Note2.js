@@ -39,11 +39,11 @@ let marks = [100,20,33,49,28,49]
 let val1 = marks;    //  marks is array and we are assigning
 val1[0] = "Hello Guys"
 // console.log(marks)
-console.log(val1)    //both same because they refer same reference in memory
+// console.log(val1)    //both same because they refer same reference in memory
 
-// const numArr = [12,22,32,12,43]  // const marks non changable values
-// numArr[2] = 11
-// console.log(numArr.slice(2,4)) // no change in original array
+const numArr = [12,22,32,12,43]  // const marks non changable values
+numArr[2] = 11
+console.log(numArr.slice(2,4)) // no change in original array
 // console.log(numArr.splice(1,1,"kapil",18))  //it affect the original array / first para-->from which index and sec. para-->how many elements and next para for insert this 
 // console.log(numArr)
 
