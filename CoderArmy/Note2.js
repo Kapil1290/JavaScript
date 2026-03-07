@@ -41,11 +41,12 @@ val1[0] = "Hello Guys"
 // console.log(marks)
 // console.log(val1)    //both same because they refer same reference in memory
 
-const numArr = [12,22,32,12,43]  // const marks non changable values
+const numArr = [12,22,32,12,43]  // In const array, we can change the values or push new element but can't asign new arraay
 numArr[2] = 11
 console.log(numArr.slice(2,4)) // no change in original array
-// console.log(numArr.splice(1,1,"kapil",18))  //it affect the original array / first para-->from which index and sec. para-->how many elements and next para for insert this 
-// console.log(numArr)
+
+console.log(numArr.splice(1,1,"kapil",18))  //it affect the original array / first para-->from which index and sec. para-->how many elements and next para for insert this 
+console.log(numArr)
 
 
 // const arr1 = [12,44,54,32,54]
