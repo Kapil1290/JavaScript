@@ -42,7 +42,7 @@
 
 
 // let balance = 300;
-// // no direct access
+// no direct access
 
 
 // balance+="rohit"
