@@ -29,16 +29,16 @@
 
 
 
-function createCounter(){
+// function createCounter(){
 
-    function increment(){
-        console.log("I am incremeting the value")
-    }
-    return increment;
-}
+//     function increment(){
+//         console.log("I am incremeting the value")
+//     }
+//     return increment;
+// }
 
-let fun = createCounter()
-console.log(fun())   // it will return the reference of the function
+// let fun = createCounter()
+// console.log(fun())   // it will return the reference of the function
 
 
 // let balance = 300;
