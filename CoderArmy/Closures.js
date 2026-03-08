@@ -38,7 +38,7 @@ function createCounter(){
 }
 
 let fun = createCounter()
-console.log(fun)   // it will return the reference of the function
+console.log(fun())   // it will return the reference of the function
 
 
 // let balance = 300;
