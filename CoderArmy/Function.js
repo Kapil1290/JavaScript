@@ -4,14 +4,14 @@
 //     console.log("Hello Frrom me!!")
 // }
 
-function sum(num1,num2,num3=0,num4=0){   // We can set default value of the parameters in function and it can replace with passing values
-    let sum = num1+num2+num3+num4;
-    return sum;
-}
-let res = sum(34,22,1);
+// function sum(num1,num2,num3=0,num4=0){   // We can set default value of the parameters in function and it can replace with passing values
+//     let sum = num1+num2+num3+num4;
+//     return sum;
+// }
+// let res = sum(34,22,1);
 
-console.log(res)
-console.log(sum(3,22,3,4))
+// console.log(res)
+// console.log(sum(3,22,3,4))
 
 
 // we try to make above function flexible using ---> Rest operator
@@ -44,10 +44,10 @@ console.log(sum(3,22,3,4))
 //     return num1+num2;
 // }
 
-const addNum = (num1,num2)=> num1+num2;  // we can write when we want to return anything from the function
-// above is the like arr.sort() in array
+// const addNum = (num1,num2)=> num1+num2;  // we can write when we want to return anything from the function
+// // above is the like arr.sort() in array
 
-console.log(addNum(2,3))
+// console.log(addNum(2,3))
 
 // const srt = num => num*num  //if we have one para. to pass then no need of () braces
 // console.log(srt(6))
@@ -66,13 +66,13 @@ console.log(addNum(2,3))
 
 // IIFE-> Immendiately Invoked Function Expression
 
-// ;(function greeting(){ 
-//     console.log("Hello From me!!"); 
-// })();
+(function greeting(){ 
+    console.log("Hello From me!!"); 
+})();
 
-// (()=>{
-//     console.log("heyyy")
-// })();
+(()=>{
+    console.log("heyyy")
+})();
 
 
 
@@ -137,6 +137,6 @@ const add =(m,n)=>{
     return sum;
 }
 
-const sum = add(a,b);
-console.log(res)
+// const sum = add(a,b);
+// console.log(res)
 
