@@ -59,9 +59,7 @@ function BankServices(){
         return balance;
       },
       withdraw: function(amt){
-        if(typeof amt == Number){
-          console.log("hello")
-        }
+        console.log(typeof amt)
       }
     }
     return user;
