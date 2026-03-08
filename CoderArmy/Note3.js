@@ -7,13 +7,17 @@ const user = {
 }
 
 
-// //CRUD Operation--> Create read update delete
+//CRUD Operation --> CREATE READ UPDATE DELETE
 
-// //Read
+// Create
+// user.sec = "A";
+// console.log(user)
+
+//Read
 // console.log(user["name"])
-// // console.log(user.emailId)
+// console.log(user.emailId)
 
-// //Update
+//Update
 // user.aadhar = 2923839;
 // user.age = 21
 
@@ -27,25 +31,26 @@ const user = {
 // console.log(Object.keys(user))  
 // console.log(Object.entries(user))  //all very imp
 
-for(let key in user){
-    console.log(key,user[key])
-}
+
+// for(let key in user){        // user return the keys during iteration
+//     console.log(key,user[key])
+// }
 
 const {name,age} = user;  // de structuring of object and to change var names from keys
 const {name:username, age: userAge} = user
 // console.log(name, userAge)
 
-// const arr = [23,22,5,65,4,5]
-// const [first, second] = arr
+const arr = [23,22,5,65,4,5]
+const [first,second] = arr
 // console.log(first , second)
 
-console.log(Object.entries(user))
+// console.log(Object.entries(user))
 
 
-// for of loop use for the array then we use it with object like this-->
-for(let keys of Object.values(user)){
-    console.log(keys)
-}
+// for-of loop use for the array then we use it with object like this-->
+// for(let keys of Object.keys(user)){
+//     console.log(keys)
+// }
 
 
 
@@ -53,30 +58,36 @@ const user1 = {
     name:"Arun",
     age:34,
     amt:1200,
-    greeting: function(){
-    console.log(`Hello from Greeting function ${this.name}`)
-        return 23;
-    },
+    // greeting: function(){
+    // console.log(`Hello from Greeting function ${this.name}`)
+    //     return 23;
+    // },
 
     address: {
         city:"Indore",
-        pin:452022
+        pin:452022,
+        sector:{
+            street:"New rog street",
+            no: 34
+        }
     }
 }
 
-console.log(user1.address.pin)
+// console.log(user1.address.pin)
 // console.log(user1.greeting())
 
-//Shallow copy
-// const user2 = {...user1};  // it give copy to user2 and they are independent but it can handle 1 labelled object, not nested
-// user2.address.city = "Pune"  // nested object and not independnt
+//SHALLOW COPY
+const user2 = {...user1};  // it give copy to user2 and they are independent but it is handled by both in 1 and >1 levels object, not nested
+// user2.address.sector.street="AB"  // nested object and not independnt
 
+// console.log(user1)
 
-//Deep copy
+//DEEP COPY
 
 const user3 = structuredClone(user1)
-user3.address.city ="Pune"
-console.log(user1)
+// user3.address.city ="Pune"
+console.log(user3)
+// console.log(user1.address.city)       // Keep Remember --> structuredCLone() doesn't copy  FUNCTION, METHOD, ARROW FUN. 
 // console.log(user3)
 
 

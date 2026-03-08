@@ -54,7 +54,7 @@ const arr2 = ["kapil",23,33]
 const arr4 = ["naman",34,false]
 // arr1.push(arr2)
 // arr1.push(arr4)
-console.log(arr1)  // it create array inside array
+// console.log(arr1)  // it create array inside array
 
 // const arr3 = arr1.concat(arr2)  // add two arrays
 // console.log(arr3)
@@ -63,27 +63,30 @@ console.log(arr1)  // it create array inside array
 const arr3 = [...arr1,...arr2,...arr4]  // it spread and show/we can merge two arrays
 // console.log(arr3)
 
-const names = ["Alice","Bob","Carni","Carni", "Shraddha", "Rohit", "alina"]
-console.log(names.toString())
+// const names = ["Alice","Bob","Carni","Carni", "Shraddha", "Rohit", "alina"]
+// console.log(names.toString())  // Array convert to whole string 
 // console.log(names.join(" # "))
 
+// let a = "kapil"
+// console.log(a.indexOf("m"))
 // console.log(names.indexOf("Carni"))
-// console.log(names.lastIndexOf("Carni"))
+// console.log(names.lastIndexOf("Bob"))
 // console.log(names.sort())  //work on actual array and use ASCII values for arrangements
-// console.log(names.reverse()) // reverse the array
+// console.log(names.reverse()) // reverse the array work on actual array
 
-// const a=[23,22,101,3022]  // sort() treats like string (" ") on the basis of ASCII
+const a=[23,22,101,3022,10,0]  // sort() treats like string (" ") on the basis of ASCII
 // a.sort();
-// console.log(a)
+// console.log(a.reverse())
 
-// a.sort((a,b)=>a-b)  // To aarange in increasing order
-// // -ve: pehle a aayega fr b aayega
-// // +ve: pehle b aayega fr a aayega
+a.sort((a,b)=>b-a)  // To aarange in increasing order
+
+// -ve: pehle a aayega fr b aayega
+// +ve: pehle b aayega fr a aayega
 // a.sort((a,b)=>b-a)
-// console.log(a)
+//console.log(a)
 
 
-// const b = [23,22,54,[32,12,[34,33,55],11],90,34,54,[34,54,65,55]]
+const b = [23,22,54,[32,12,[34,[84,90,48],55],11],90,34,54,[34,54,65,55]]  // index at arrays
 
 
 // console.log(b[3][1])
@@ -91,5 +94,5 @@ console.log(names.toString())
 // console.log(b[7][2])
 
 
-// let newX = b.flat(1)  //this method de-bracketize the values and open by flat parameter like 0,1,2....infinity
-// console.log(newX)
+let newX = b.flat(2)  //this method de-bracketize the values and open by flat parameter like 0,1,2....infinity
+console.log(newX)

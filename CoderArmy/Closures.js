@@ -7,36 +7,38 @@
 //Valid for only let and const
 // var--> follow funtional scope 
 
+// console.log(c)
+
 // let a=19;
 // const b=21;  // use anywhere, it has global scope
 // var c = 22;
 
-
-// // function greet(){
-// //     console.log(a)          //-> Functional Scope  
-// //     let c = 23;            // scope within first curly braces 
-// // }
-
-
-// // if(a!=b){
-// //     console.log(b)   
-// //     var c=90; 
-// //     console.log(c)
-// // }
-// // greet()
-
-
-
-// function createCounter(){
-
-//     function increment(){
-//         console.log("I am incremeting the value")
-//     }
-//     return increment;
+// greet()
+// function greet(){
+//     console.log(a)          //-> Functional Scope  
+//     let c = 23;            // scope within first curly braces 
 // }
 
-// let fun = createCounter()
-// console.log(fun)   // it will return the reference of the function
+
+// if(a!=b){
+//     console.log(b)   
+//     var c=90; 
+//     console.log(c)
+// }
+// greet()
+
+
+
+function createCounter(){
+
+    function increment(){
+        console.log("I am incremeting the value")
+    }
+    return increment;
+}
+
+let fun = createCounter()
+console.log(fun)   // it will return the reference of the function
 
 
 // let balance = 300;
