@@ -59,9 +59,8 @@ function BankServices(){
         return balance;
       },
       withdraw: function(amt){
-        if(amt<=balance && amt!="hello"){
-            balance = balance - amt;
-            return balance;
+        if(typeof amt == Number){
+          console.log("hello")
         }
       }
     }
@@ -70,7 +69,7 @@ function BankServices(){
 
 let detail = BankServices();
 console.log(detail.checkBalance())
-console.log(detail.withdraw(300))
+console.log(detail.withdraw(120))
 console.log(detail.checkBalance())
 console.log(detail.deposit(2000))
 console.log(detail.checkBalance())
