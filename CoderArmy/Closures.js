@@ -59,7 +59,6 @@ function BankServices(){
         return this.balance;
       },
       withdraw: function(amt){
-        console.log(typeof amt)
         if(typeof amt == "number"){
           if(amt<=balance){
             balance = balance - amt;
