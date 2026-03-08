@@ -53,13 +53,16 @@ function BankServices(){
     let user = {
         deposit: function(amt){
         balance += amt;
-        return balance
+        return this.balance
       },
         checkBalance: function(){
-        return balance;
+        return this.balance;
       },
       withdraw: function(amt){
         console.log(typeof amt)
+        if(typeof amt == "number"){
+          console.log("hello")
+        }
       }
     }
     return user;
