@@ -82,15 +82,15 @@ function greeting(){
     console.log("Hello ji!!"); 
 }
 
-// function meeting(callback){ 
-//     console.log("I am going to meet!!");
-//     callback();                              // it execute the other fun. then come here, but it can't hard code
-//     // code hota
-//     console.log("i have finished meeting")                 
-// }
+function meeting(a){ 
+    console.log("I am going to meet!!");
+    a();                              // it execute the other fun. then come here, but it can't hard code
+    // code hota
+    console.log("i have finished meeting")                 
+}
 
 
-// meeting(greeting)
+meeting(greeting)
 
 
 
@@ -107,15 +107,16 @@ function zomatoOrderPlace(){
 
 function payment(amt, callback){
     console.log(`${amt} payment has initialized`);
-    console.log("payment is received")
+    console.log("Payment Received")
+    
     callback();
     //GST
     //Rider money
     //company ka money
 }
 
-// payment(400,zomatoOrderPlace)
-// payment(122,blinkitOrderPlace)          // passing the function as argument
+payment(400,zomatoOrderPlace)
+payment(122,blinkitOrderPlace)          // passing the function as argument
 
 
 
