@@ -62,7 +62,7 @@ paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
         pickOrder(orderDetails,(orderDetails)=>{
             deliveryOrder(orderDetails,(orderDetails)=>{
-                console.log(orderDetails.deliveryStatus);
+                console.log(orderDetails);
             })
         })
     })
