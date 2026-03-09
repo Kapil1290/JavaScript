@@ -68,7 +68,7 @@ const products = [
 // const newProducts = products.filter((products)=>products.price>500 && products.instock==false).map((products)=>({name:products.name, price:products.price, stock:products.instock}))
 // console.log(newProducts)
 
-const pro = products.filter((products)=>products.instock==true)
+const pro = products.filter((products)=>products.name=="Mouse")
 console.log(pro)
 
 // Reducer
