@@ -36,7 +36,7 @@ function pickOrder(orderDetails, callback){
     }, 1000);
 }
 
-function deliveryOrder(callback){
+function deliveryOrder(){
     console.log("Order has dispatched");
     setTimeout(() => {
         console.log("order successfully arrived")
@@ -47,11 +47,17 @@ const callback = ()=>{
     deliveryOrder(orderDetails);
 }
 
+// paymentOrder(orderDetails,(orderDetails)=>{
+//     preparingOrder(orderDetails,(orderDetails)=>{
+//         pickOrder(orderDetails,(orderDetails)=>{                  // we are passing function 
+//             deliveryOrder();                                      // callback inside function
+//             console.log(orderDetails)
+//         })
+//     });
+// });
+
 paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
-        pickOrder(orderDetails,()=>{                  // we are passing function 
-            deliveryOrder();                // callback inside function
-            console.log(orderDetails)
-        })
-    });
-});
+        
+    })
+})
