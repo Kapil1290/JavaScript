@@ -58,6 +58,8 @@ const callback = ()=>{
 
 paymentOrder(orderDetails,(orderDetails)=>{
     preparingOrder(orderDetails,(orderDetails)=>{
-        
+        pickOrder(orderDetails,(orderDetails)=>{
+            
+        })
     })
 })
