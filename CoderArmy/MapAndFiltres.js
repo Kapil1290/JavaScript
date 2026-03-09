@@ -1,5 +1,7 @@
 // ForEach, filter, reducer, map, set
 
+// DO IT AGAIN AND AGAIN
+
 // const arr = [10,20,30,40,39,23];
 // let sum = 0;
 // arr.forEach((num)=>{   // number parameter is mandatory
@@ -10,18 +12,18 @@
 
 // const arr = [10,20,30,40,39,23];
 // const val = arr.filter((num)=>num>20 && num<30)     //filter takes callback function and it returns new array
-// // console.log(val)
+// console.log(val)
 
-// // const compare = (num) => num>20;
+// const compare = (num) => num>20;
 
 // Array.prototype.filtered = function(compare){       // Only for arr named array but if we write Array.prototype.filtered
-//     let newArr = [];
-//     for(let val of this){
-//         if(compare(val)){
-//             newArr.push(val)
-//         }
+//   let newArr = [];
+//   for(let val of this){
+//     if(compare(val)){
+//       newArr.push(val)
 //     }
-//     return newArr;
+//   }
+//   return newArr;
 // }
 
 // const newArray = arr.filtered((num)=>num>20)
@@ -63,7 +65,7 @@ const products = [
 // console.log(ans)
 // console.log(newProduct)
 
-const newProducts = products.filter((products)=>products.price>500&&products.instock==true).map((products)=>({name:products.name, price:products.price, stock:products.instock}))
+const newProducts = products.filter((products)=>products.price>500 && products.instock==false).map((products)=>({name:products.name, price:products.price, stock:products.instock}))
 console.log(newProducts)
 
 
@@ -82,13 +84,14 @@ console.log(newProducts)
 
 // Set
 
-// let arr2 = [23,21,45,44,23,21,44,21]
-// console.log(arr2)
+let arr2 = [23,21,45,44,23,21,44,21]
+console.log(arr2)
 
-// const s1 = new Set(arr2)
-// s1.add(33)
-// console.log(s1.has(34))
-// s1.delete(21)
+const s1 = new Set(arr2)
+s1.add(33)
+console.log(s1.has(34))
+s1.delete(21)
+console.log(s1)
 
 // s1.clear();
 // console.log(s1.size)
@@ -98,28 +101,28 @@ console.log(newProducts)
 // const email = ["ro@gm","ro@gm", "gs@gm", "ty@gm"]
 // const unique = new Set(email);
 // console.log(unique)
-// // to come back
+// to come back
 
 // const uniqueEmail = [...new Set(email)]
 // console.log(uniqueEmail)
 
 
 
-// // map
-// // key can be object, string, boolean, array or anything
+// map
+// key can be object, string, boolean, array or anything
 
-// const m1 = new Map([
-//     [1,"kapil"],
-//     [true, "helo"],
-//     ["hello", 2],
-//     [[23,22,22],"Mohit"]
-// ]);
+const m1 = new Map([
+    [1,"kapil"],
+    [true, "helo"],
+    ["hello", 2],
+    [[23,22,22],"Mohit"]
+]);
 
 
-// m1.set({name:"manish",age:23},false)
-// console.log(m1.has("hello"))
-// console.log(m1.size)
-// // console.log(m1)
+m1.set({name:"manish",age:23},false)  // set method of map to push new key and value in map
+console.log(m1.has("hello"))
+console.log(m1.size)
+console.log(m1)
 
 // for(let [key,val] of m1){
 //     console.log(`${key}=>${val}`)

@@ -121,23 +121,23 @@ payment(122,blinkitOrderPlace)          // passing the function as argument
 
 
 
-// console.log(x)
-var x = 10;
+console.log(sum)
+let x = 10;
 var y = 20;
 
 
 // Memory allocation
 // a = 10
-// b= 12
+// b = 12
 // sum = <uninitialized> (Temporal dead zone)   -->  give error
 
 //const and let gives error --> access before initialization
 
 const add =(m,n)=>{      
-    var val = m+n;
+    var sum = m+n;
     return sum;
 }
 
-// const sum = add(a,b);
-// console.log(res)
+// const sum = add(x,y);
+console.log(sum)
 
