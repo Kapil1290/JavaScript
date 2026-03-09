@@ -65,9 +65,11 @@ const products = [
 // console.log(ans)
 // console.log(newProduct)
 
-const newProducts = products.filter((products)=>products.price>500 && products.instock==false).map((products)=>({name:products.name, price:products.price, stock:products.instock}))
-console.log(newProducts)
+// const newProducts = products.filter((products)=>products.price>500 && products.instock==false).map((products)=>({name:products.name, price:products.price, stock:products.instock}))
+// console.log(newProducts)
 
+const pro = products.filter((products)=>products.instock==true)
+console.log(pro)
 
 // Reducer
 // const total = products.reduce((accumulator, currValue)=>{                      // iterate on the array and count the product basis of any object's key and it shows number values
