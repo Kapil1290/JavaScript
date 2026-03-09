@@ -32,7 +32,7 @@ function pickOrder(orderDetails, callback){
     setTimeout(() => {
         console.log("Order has picked by delivery boy");
         orderDetails.fetch_delivery_from_resto = true;
-        callback();
+        callback(orderDetails);
     }, 1000);
 }
 
